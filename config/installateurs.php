@@ -115,11 +115,11 @@ return [
         ],
     ],
 
-    // DEMO — om Pull The Plug te overtuigen. Verwijderen (of status 'voorbeeld') vóór livegang!
+    // DEMO Pull The Plug — staat uit. Op 'voorbeeld' zetten = pagina enkel via directe link, niet op de homepage, geen inschrijvingen.
     // Inschrijvingen komen nu enkel bij info@techneutjens.be terecht.
     'pulltheplug' => [
         'naam'      => 'Pull The Plug',
-        'status'    => 'actief',
+        'status'    => 'verborgen',
         'gemeente'  => 'Overijse',
         'intro'     => [
             'Pull The Plug uit Overijse plaatst al meer dan 15 jaar zonnepanelen, batterijsystemen en slimme laadpalen bij particulieren en bedrijven.',
@@ -154,11 +154,11 @@ return [
         ],
     ],
 
-    // DEMO — om BW-Tec te overtuigen. Verwijderen (of status 'voorbeeld') vóór livegang!
+    // DEMO BW-Tec — staat uit. Op 'voorbeeld' zetten = pagina enkel via directe link, niet op de homepage, geen inschrijvingen.
     // Inschrijvingen komen nu enkel bij info@techneutjens.be terecht.
     'bwtec' => [
         'naam'      => 'BW-Tec',
-        'status'    => 'actief',
+        'status'    => 'verborgen',
         'gemeente'  => 'Lo-Reninge',
         'intro'     => [
             'BW-Tec uit Noordschote (Lo-Reninge) is het installatiebedrijf van Wouter Beirnaert, actief in residentiële en industriële projecten.',
