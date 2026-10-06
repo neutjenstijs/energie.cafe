@@ -1,0 +1,16 @@
+# Combell AutoGit — deployment-configuratie voor energie.cafe
+# Docs: https://github.com/combell/autogit-reference
+#
+#  - www/  is de document root (publiek).
+#  - app/, config/ en data/ staan ernaast en zijn dus NIET via het web bereikbaar.
+#
+# shared_folders: data/ bevat de databank met inschrijvingen, de geheimen
+# (SMTP, sleutel) en de sessies. Die map moet ALLE deploys overleven,
+# anders zijn de inschrijvingen weg na elke update.
+shared_folders:
+  - data
+shared_files: []
+
+hooks:
+  install_after: |
+    exit 0

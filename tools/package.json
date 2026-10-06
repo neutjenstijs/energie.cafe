@@ -1,0 +1,8 @@
+{
+  "name": "energiecafe-dev",
+  "private": true,
+  "type": "module",
+  "description": "Lokale testserver (PHP in WebAssembly, geen PHP-installatie nodig).",
+  "scripts": { "start": "node dev-server.mjs .." },
+  "dependencies": { "@php-wasm/node": "*", "@php-wasm/universal": "*" }
+}

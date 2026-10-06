@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /beheer/
+Disallow: /afmelden.php
+Disallow: /bedankt.php
+Sitemap: https://energie.cafe/sitemap.php

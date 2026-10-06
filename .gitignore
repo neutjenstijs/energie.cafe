@@ -1,0 +1,6 @@
+# Alles in data/ is server-specifiek: databank, geheimen, sessies, mails.
+/data/*
+!/data/.gitkeep
+node_modules/
+.DS_Store
+Thumbs.db
