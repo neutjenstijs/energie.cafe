@@ -30,10 +30,10 @@ return [
         ['waarde' => '45′',  'label' => 'heldere uitleg, daarna al je vragen'],
     ],
 
-    // "Ook te horen bij": verwijder een regel als je het niet mag vermelden.
+    // "In het verleden al te horen bij": verwijder een regel als je het niet mag vermelden.
     'referenties' => [
         'ElParo (Hamont-Achel)',
-        'Elektro KG Sun',
+        'Elektro KG Sun (Beveren)',
         'Masterclass van ODE Vlaanderen',
     ],
 

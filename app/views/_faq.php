@@ -3,7 +3,7 @@
 $bij = isset($inst) ? $inst['naam'] : 'de installateur';
 $vragen = [
     ['Wat kost een Energiecafé?', 'Niets. De inkom is gratis en je krijgt na de uitleg een drankje aangeboden.'],
-    ['Moet ik iets kopen of een offerte aanvragen?', 'Nee. Het Energiecafé is een infoavond, geen verkoopmoment. Wil je achteraf persoonlijk advies, dan kan dat bij ' . $bij . ', maar het hoeft niet.'],
+    ['Moet ik iets kopen of een offerte aanvragen?', 'Nee. Het Energiecafé is in de eerste plaats een infoavond, je zit nergens aan vast. Wil je achteraf persoonlijk advies voor jouw woning, dan helpt ' . $bij . ' je graag verder.'],
     ['Is het iets voor mij als ik nog geen zonnepanelen heb?', 'Zeker. Of je nu nog moet beginnen, al jaren zonnepanelen hebt of twijfelt over een batterij: je gaat naar huis met een duidelijk beeld van wat voor jouw situatie zinvol is.'],
     ['Met hoeveel mogen we komen?', 'Eén inschrijving geldt voor 1 of 2 personen uit hetzelfde gezin. Kom je met meer, schrijf je dan een tweede keer in. Zo houden we de plaatsen eerlijk verdeeld.'],
     ['Kan ik vooraf een vraag stellen?', 'Graag zelfs. Vul ze in bij je inschrijving. Tijs neemt ze mee in de uitleg of beantwoordt ze persoonlijk na afloop.'],

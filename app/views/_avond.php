@@ -7,7 +7,7 @@ $bij = isset($inst) ? $inst['naam'] : 'de installateur';
     <div class="sectie-kop">
       <p class="eyebrow">Zo verloopt de avond</p>
       <h2>Een klein uur uitleg. Daarna alle tijd voor jouw vragen.</h2>
-      <p class="lead">Geen verkooppraatje, geen ingewikkelde grafieken. Wel een helder verhaal waarmee je thuis meteen verder kan.</p>
+      <p class="lead">Geen vakjargon of ingewikkelde grafieken, wel een helder verhaal waarmee je thuis meteen verder kan.</p>
     </div>
     <ol class="verloop">
       <li>

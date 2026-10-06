@@ -81,7 +81,6 @@ $org = site('organisator');
         <ul>
           <li><a href="/#faq">Veelgestelde vragen</a></li>
           <li><a href="/privacy/">Privacyverklaring</a></li>
-          <li><a href="mailto:<?= e($org['email']) ?>"><?= e($org['email']) ?></a></li>
           <li><a href="/beheer/">Login installateurs</a></li>
         </ul>
       </div>

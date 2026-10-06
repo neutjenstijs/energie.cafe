@@ -51,7 +51,7 @@
       <div class="voordeel">
         <div class="icoon"><?= icoon('balans') ?></div>
         <h3>Eerlijk en merkneutraal</h3>
-        <p>Geen verkooppraatje, wel uitleg. Je hoort wat werkt, wat (nog) niet, en voor wie het loont.</p>
+        <p>Geen merkenpraat, wel uitleg. Je hoort wat werkt, wat (nog) niet, en voor wie het loont.</p>
       </div>
       <div class="voordeel">
         <div class="icoon"><?= icoon('lamp') ?></div>

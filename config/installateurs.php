@@ -115,9 +115,11 @@ return [
         ],
     ],
 
+    // DEMO — om Pull The Plug te overtuigen. Verwijderen (of status 'voorbeeld') vóór livegang!
+    // Inschrijvingen komen nu enkel bij info@techneutjens.be terecht.
     'pulltheplug' => [
         'naam'      => 'Pull The Plug',
-        'status'    => 'voorbeeld',
+        'status'    => 'actief',
         'gemeente'  => 'Overijse',
         'intro'     => [
             'Pull The Plug uit Overijse plaatst al meer dan 15 jaar zonnepanelen, batterijsystemen en slimme laadpalen bij particulieren en bedrijven.',
@@ -146,9 +148,48 @@ return [
             ],
         ],
         'sessies'   => [
-            // Voorbeelddatums, enkel ter illustratie (status 'voorbeeld').
+            // Voorbeelddatums, enkel ter illustratie.
             ['id' => 'ptp-voorbeeld-1', 'datum' => '2027-01-21', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 40],
             ['id' => 'ptp-voorbeeld-2', 'datum' => '2027-03-18', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 40],
+        ],
+    ],
+
+    // DEMO — om BW-Tec te overtuigen. Verwijderen (of status 'voorbeeld') vóór livegang!
+    // Inschrijvingen komen nu enkel bij info@techneutjens.be terecht.
+    'bwtec' => [
+        'naam'      => 'BW-Tec',
+        'status'    => 'actief',
+        'gemeente'  => 'Lo-Reninge',
+        'intro'     => [
+            'BW-Tec uit Noordschote (Lo-Reninge) is het installatiebedrijf van Wouter Beirnaert, actief in residentiële en industriële projecten.',
+            'Van zonnepanelen en thuisbatterijen over algemene elektriciteit tot verwarming, ventilatie en warmtepompen: alles met de precisie van een vakman.',
+        ],
+        'troeven'   => [
+            'Zonnepanelen en thuisbatterijen',
+            'Elektriciteit, HVAC en warmtepompen',
+            'Residentieel en industrieel',
+        ],
+        'logo'             => 'logo-bwtec.png',
+        'logo_achtergrond' => '#ffffff',
+        'kleur'     => '#E8630A',
+        'website'   => 'https://www.bwtec.be',
+        'telefoon'  => '0491 56 96 49',
+        'email'     => 'info@bwtec.be',
+        'meldingen' => [],
+        'beheerders'=> [],
+        'bevestiging_extra' => '',
+        'locaties'  => [
+            'kantoor' => [
+                'naam'     => 'BW-Tec',
+                'adres'    => 'Middelstraat 36',
+                'postcode' => '8647',
+                'gemeente' => 'Noordschote (Lo-Reninge)',
+            ],
+        ],
+        'sessies'   => [
+            // Voorbeelddatums, enkel ter illustratie.
+            ['id' => 'bwtec-voorbeeld-1', 'datum' => '2027-02-11', 'uur' => '19:30', 'locatie' => 'kantoor', 'plaatsen' => 40],
+            ['id' => 'bwtec-voorbeeld-2', 'datum' => '2027-04-22', 'uur' => '19:30', 'locatie' => 'kantoor', 'plaatsen' => 40],
         ],
     ],
 
