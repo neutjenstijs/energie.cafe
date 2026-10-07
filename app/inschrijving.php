@@ -54,7 +54,7 @@ function verwerk_inschrijving(array $in, array $inst, string $bron = 'website', 
             $pdo->exec('ROLLBACK');
             $msg = $vrij <= 0
                 ? 'Deze avond is intussen volzet. Kies een andere datum of laat je e-mailadres achter voor nieuwe datums.'
-                : 'Er is nog maar 1 plaats vrij op deze avond. Schrijf je in voor 1 persoon of kies een andere datum.';
+                : 'Er is op deze avond niet genoeg plaats meer voor 2 personen. Schrijf je in voor 1 persoon of kies een andere datum.';
             return ['ok' => false, 'fouten' => ['sessie' => $msg], 'waarden' => $v];
         }
         $v['installateur'] = $inst['slug'];

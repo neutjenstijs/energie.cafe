@@ -83,6 +83,11 @@
       <h2>Bij een installateur in jouw buurt</h2>
       <p class="lead">Elk Energiecafé brengt hetzelfde heldere verhaal. Kies de locatie die voor jou het dichtstbij ligt en schrijf je in voor een datum.</p>
     </div>
+    <p class="kaart-legende" aria-hidden="true">
+      <span><i style="background:var(--groen)"></i>Plaatsen beschikbaar</span>
+      <span><i style="background:var(--oranje)"></i>Laatste plaatsen</span>
+      <span><i style="background:var(--rood)"></i>Volzet</span>
+    </p>
     <div class="kaarten">
       <?php foreach ($installateurs as $i):
         $komend = komende_sessies($i); ?>
@@ -96,8 +101,8 @@
             <?php if ($komend): ?>
               <ul class="kaart-datums" aria-label="Komende datums">
                 <?php foreach (array_slice($komend, 0, 4) as $s):
-                  $vol = vrije_plaatsen($s, $bez) <= 0; ?>
-                  <li class="<?= $vol ? 'volzet' : '' ?>"><?= e(datum_kort($s['start'])) ?><?= $vol ? ' · volzet' : '' ?></li>
+                  $status = beschikbaarheid($s, $bez); ?>
+                  <li class="<?= e($status) ?>" title="<?= e(BESCHIKBAARHEID_LABEL[$status]) ?>"><span class="stip" aria-hidden="true"></span><?= e(datum_kort($s['start'])) ?><span class="sr"> – <?= e(BESCHIKBAARHEID_LABEL[$status]) ?></span></li>
                 <?php endforeach; ?>
               </ul>
               <span class="kaart-actie">Bekijk datums en schrijf in <?= icoon('pijl') ?></span>

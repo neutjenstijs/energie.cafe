@@ -24,6 +24,7 @@
   --lijn: #e3dccd;
   --lijn-donker: #2e2e2e;
   --groen: #1f7a3d;
+  --oranje: #b45309;
   --rood: #b42318;
   --radius: 14px;
   --radius-s: 8px;
@@ -238,8 +239,14 @@ h3 { font-size: 1.2rem; letter-spacing: -.01em; font-weight: 700; }
 .kaart-plaats { display: flex; align-items: center; gap: 6px; color: var(--tekst-zacht); margin-bottom: 16px; font-size: .97rem; }
 .kaart-plaats svg { width: 16px; height: 16px; color: var(--goud-tekst); }
 .kaart-datums { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.kaart-datums li { font-size: .88rem; font-weight: 600; background: var(--creme); border-radius: 6px; padding: 6px 10px; }
-.kaart-datums li.volzet { color: var(--tekst-zacht); text-decoration: line-through; font-weight: 500; }
+.kaart-datums li { display: inline-flex; align-items: center; gap: 7px; font-size: .88rem; font-weight: 600; background: var(--creme); border-radius: 6px; padding: 6px 10px; }
+.kaart-datums .stip { width: 8px; height: 8px; border-radius: 50%; background: var(--groen); flex: none; }
+.kaart-datums li.laatste .stip { background: var(--oranje); }
+.kaart-datums li.volzet .stip, .kaart-datums li.gesloten .stip { background: var(--rood); }
+.kaart-datums li.volzet, .kaart-datums li.gesloten { color: var(--tekst-zacht); text-decoration: line-through; font-weight: 500; }
+.kaart-legende { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: -6px 0 24px; font-size: .88rem; color: var(--tekst-zacht); }
+.kaart-legende span { display: inline-flex; align-items: center; gap: 7px; }
+.kaart-legende i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 .kaart-leeg { color: var(--tekst-zacht); font-size: .95rem; margin-bottom: 20px; }
 .kaart-actie { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--zwart); }
 .kaart-actie svg { width: 18px; height: 18px; transition: transform .2s ease; }
@@ -320,12 +327,13 @@ h3 { font-size: 1.2rem; letter-spacing: -.01em; font-weight: 700; }
 .sessie-dag { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--goud-tekst); }
 .sessie-datum { display: block; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; margin: 2px 0 4px; }
 .sessie-meta { display: block; font-size: .92rem; color: var(--tekst-zacht); }
-.sessie-plaats { display: inline-block; margin-top: 10px; font-size: .8rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #e8f3ec; color: var(--groen); }
-.sessie-plaats.bijna { background: #fdf0d5; color: #8a5a00; }
+.sessie-plaats { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: .8rem; font-weight: 700; padding: 3px 10px 3px 8px; border-radius: 999px; background: #e8f3ec; color: var(--groen); }
+.sessie-plaats::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.sessie-plaats.laatste { background: #fdeedd; color: var(--oranje); }
+.sessie-plaats.volzet, .sessie-plaats.gesloten { background: #fdecea; color: var(--rood); }
 .sessie.volzet { cursor: not-allowed; }
 .sessie.volzet .sessie-kaart { background: #f7f7f5; border-style: dashed; }
 .sessie.volzet .sessie-datum, .sessie.volzet .sessie-dag { color: #a5a29b; }
-.sessie.volzet .sessie-plaats { background: #eee; color: #77736b; }
 .sessie-check { position: absolute; top: 14px; right: 14px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--lijn); display: grid; place-items: center; transition: all .15s ease; }
 .sessie-check svg { width: 13px; height: 13px; color: var(--goud); opacity: 0; }
 .sessie input:checked + .sessie-kaart .sessie-check { background: var(--zwart); border-color: var(--zwart); }

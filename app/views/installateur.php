@@ -71,26 +71,19 @@ $uw = fn(string $k) => $update_waarden[$k] ?? '';
           <?= $f('sessie') ?>
           <div class="sessies" role="radiogroup">
             <?php foreach ($komend as $s):
-              $vrij = vrije_plaatsen($s, $bez);
-              $dicht = $vrij <= 0 || !empty($s['gesloten']);
+              $status = beschikbaarheid($s, $bez);
+              $dicht = in_array($status, ['volzet', 'gesloten'], true);
+              $anderJaar = $s['start']->format('Y') !== date('Y');
               $sl = $s['loc']; ?>
               <label class="sessie<?= $dicht ? ' volzet' : '' ?>">
                 <input type="radio" name="sessie" value="<?= e($s['id']) ?>" <?= $dicht || $voorbeeld ? 'disabled' : '' ?> <?= $s['id'] === $gekozen && !$dicht ? 'checked' : '' ?> required>
                 <span class="sessie-kaart">
                   <span class="sessie-check"><?= icoon('check') ?></span>
                   <span class="sessie-dag"><?= e(DAGEN[(int) $s['start']->format('w')]) ?></span>
-                  <span class="sessie-datum"><?= e($s['start']->format('j') . ' ' . MAANDEN[(int) $s['start']->format('n')]) ?></span>
+                  <span class="sessie-datum"><?= e($s['start']->format('j') . ' ' . MAANDEN[(int) $s['start']->format('n')] . ($anderJaar ? ' ' . $s['start']->format('Y') : '')) ?></span>
                   <span class="sessie-meta"><?= e(uur($s['start'])) ?> · <?= e($sl['gemeente'] ?? '') ?></span>
                   <?php if (count($inst['locaties']) > 1): ?><span class="sessie-meta"><?= e($sl['naam'] ?? '') ?></span><?php endif; ?>
-                  <?php if (!empty($s['gesloten'])): ?>
-                    <span class="sessie-plaats">Inschrijvingen gesloten</span>
-                  <?php elseif ($vrij <= 0): ?>
-                    <span class="sessie-plaats">Volzet</span>
-                  <?php elseif ($vrij <= 8): ?>
-                    <span class="sessie-plaats bijna">Nog <?= $vrij ?> <?= $vrij === 1 ? 'plaats' : 'plaatsen' ?></span>
-                  <?php else: ?>
-                    <span class="sessie-plaats">Plaatsen vrij</span>
-                  <?php endif; ?>
+                  <span class="sessie-plaats <?= e($status) ?>"><?= e(BESCHIKBAARHEID_LABEL[$status]) ?></span>
                 </span>
               </label>
             <?php endforeach; ?>

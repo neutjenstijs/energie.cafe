@@ -110,8 +110,10 @@ return [
             ],
         ],
         'sessies'   => [
-            // Nog geen datums. Voorbeeld:
-            // ['id' => 'bes-2026-11-19', 'datum' => '2026-11-19', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 50],
+            ['id' => 'bes-2026-11-17', 'datum' => '2026-11-17', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 50],
+            ['id' => 'bes-2026-12-02', 'datum' => '2026-12-02', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 50],
+            ['id' => 'bes-2027-01-26', 'datum' => '2027-01-26', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 50],
+            ['id' => 'bes-2027-02-24', 'datum' => '2027-02-24', 'uur' => '19:00', 'locatie' => 'kantoor', 'plaatsen' => 50],
         ],
     ],
 

@@ -215,6 +215,26 @@ function vrije_plaatsen(array $s, array $bez): int
     return max(0, (int) $s['plaatsen'] - ($bez[$s['id']]['personen'] ?? 0));
 }
 
+/**
+ * Beschikbaarheid zoals de bezoeker ze ziet, zonder aantallen:
+ * 'vrij' (groen), 'laatste' (oranje), 'volzet' (rood) of 'gesloten'.
+ * "Laatste plaatsen" vanaf 20 % vrije plaatsen (minstens 4).
+ */
+function beschikbaarheid(array $s, array $bez): string
+{
+    if (!empty($s['gesloten'])) return 'gesloten';
+    $vrij = vrije_plaatsen($s, $bez);
+    if ($vrij <= 0) return 'volzet';
+    return $vrij <= max(4, (int) ceil($s['plaatsen'] * 0.2)) ? 'laatste' : 'vrij';
+}
+
+const BESCHIKBAARHEID_LABEL = [
+    'vrij' => 'Plaatsen beschikbaar',
+    'laatste' => 'Laatste plaatsen',
+    'volzet' => 'Volzet',
+    'gesloten' => 'Inschrijvingen gesloten',
+];
+
 function nu(): string
 {
     return (new DateTimeImmutable())->format('Y-m-d H:i:s');
@@ -256,7 +276,7 @@ function datum_lang(DateTimeImmutable $d, bool $jaar = true): string
 /** "za 17/10" */
 function datum_kort(DateTimeImmutable $d): string
 {
-    return mb_substr(DAGEN[(int) $d->format('w')], 0, 2) . ' ' . $d->format('d/m');
+    return mb_substr(DAGEN[(int) $d->format('w')], 0, 2) . ' ' . $d->format($d->format('Y') === date('Y') ? 'd/m' : 'd/m/y');
 }
 
 function uur(DateTimeImmutable $d): string
