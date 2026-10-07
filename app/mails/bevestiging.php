@@ -34,6 +34,6 @@ $kleur = $inst['kleur'] ?? '#DBAA49';
 
 <p style="margin:0 0 16px">Vragen over de avond of de locatie? Antwoord gewoon op deze mail of contacteer <?= e($inst['naam']) ?> via <a href="tel:<?= e(preg_replace('/\s+/', '', $inst['telefoon'])) ?>" style="color:#0d0d0d"><?= e($inst['telefoon']) ?></a>.</p>
 
-<p style="margin:0 0 20px">Tot dan!<br>Tijs en het team van <?= e($inst['naam']) ?></p>
+<p style="margin:0 0 20px">Tot dan!<br><?= $inst['slug'] === 'techneutjens' ? 'Tijs en het team van TechNeutjens' : 'Het team van ' . e($inst['naam']) ?></p>
 
 <p style="margin:0 0 6px;font-size:13px;color:#777">Kan je toch niet? <a href="<?= e(url('afmelden.php?t=' . rawurlencode($ins['token']))) ?>" style="color:#777">Meld je hier af</a>, dan geven we je plaats aan iemand anders.</p>

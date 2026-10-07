@@ -33,8 +33,7 @@ $kleur = $inst['kleur'] ?? '#DBAA49';
       </tr>
       <tr>
         <td style="padding:20px 28px 26px;color:#8a8a8a;font-size:12px;line-height:1.5;border-top:1px solid #eee">
-          Energiecafé · infoavonden over slim elektrificeren · <a href="<?= e(url()) ?>" style="color:#8a8a8a">energie.cafe</a><br>
-          Platform beheerd door <?= e(site('organisator')['naam']) ?>, <?= e(site('organisator')['adres']) ?>
+          Energiecafé · infoavonden over slim elektrificeren · <a href="<?= e(url()) ?>" style="color:#8a8a8a">energie.cafe</a>
         </td>
       </tr>
     </table>
